@@ -7,7 +7,7 @@ public class DeliveryService {
     private List<CollectionPoint> collectionPoints = new ArrayList<>();
 
     public void addLocker(String name, int... boxes) {
-        collectionPoints.add(new CollectionPoint(name, boxes));
+        collectionPoints.add(new CollectionPoint(name, new Boxes(boxes)));
     }
 
     public List<String> collectionPointsForPackageOfSize(int packageSize) {

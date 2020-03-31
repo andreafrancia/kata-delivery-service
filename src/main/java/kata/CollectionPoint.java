@@ -5,9 +5,9 @@ class CollectionPoint
     final String name;
     private final Container container;
 
-    public CollectionPoint(String name, int[] container) {
+    public CollectionPoint(String name, Container container) {
         this.name = name;
-        this.container = new Boxes(container);
+        this.container = container;
     }
 
     boolean canAcceptPackageOfSize(int packageSize) {
