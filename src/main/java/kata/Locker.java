@@ -11,6 +11,10 @@ class Locker
     }
 
     boolean canAcceptPackageOfSize(int packageSize) {
-        return boxes[0] >= packageSize;
+        for(int box: boxes) {
+            if(box >= packageSize)
+                return true;
+        }
+        return false;
     }
 }
