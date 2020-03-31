@@ -3,16 +3,6 @@ package kata;
 import java.util.ArrayList;
 import java.util.List;
 
-class Locker
-{
-    final String name;
-    final int box;
-
-    public Locker(String name, int box) {
-        this.name = name;
-        this.box = box;
-    }
-}
 public class DeliveryService {
     private List<Locker> lockers = new ArrayList<>();
 
@@ -23,7 +13,7 @@ public class DeliveryService {
     public List<String> collectionPointsForPackageOfSize(int packageSize) {
         var result = new ArrayList<String>();
         for(Locker locker: lockers) {
-            if (locker.box >= packageSize)
+            if (locker.canAcceptPackageOfSize(packageSize))
                 result.add(locker.name);
         }
         return result;
