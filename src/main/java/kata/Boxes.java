@@ -1,6 +1,6 @@
 package kata;
 
-class Boxes {
+class Boxes implements Container {
 
     final int[] boxes;
 
@@ -8,7 +8,8 @@ class Boxes {
         this.boxes = boxes;
     }
 
-    boolean boxesCanAcceptPackageOfSize(int packageSize) {
+    @Override
+    public boolean boxesCanAcceptPackageOfSize(int packageSize) {
         for(int box: boxes) {
             if(box >= packageSize)
                 return true;
