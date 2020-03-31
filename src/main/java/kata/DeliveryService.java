@@ -10,6 +10,10 @@ public class DeliveryService {
         collectionPoints.add(new CollectionPoint(name, new Boxes(boxes)));
     }
 
+    public void addHub(String name) {
+        collectionPoints.add(new CollectionPoint(name, new Hub()));
+    }
+
     public List<String> collectionPointsForPackageOfSize(int packageSize) {
         var result = new ArrayList<String>();
         for(CollectionPoint collectionPoint : collectionPoints) {

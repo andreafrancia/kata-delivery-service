@@ -56,12 +56,12 @@ public class DeliveryServiceTest {
         assertEquals(List.of("a-locker"), result);
     }
 
-//    @Test
-//    public void oneHub() {
-//        service.addHub("hub");
-//
-//        List<String> result = service.collectionPointsForPackageOfSize(10);
-//
-//        assertEquals(List.of("hub"), result);
-//    }
+    @Test
+    public void oneHub() {
+        service.addHub("hub");
+
+        List<String> result = service.collectionPointsForPackageOfSize(10);
+
+        assertEquals(List.of("hub"), result);
+    }
 }
