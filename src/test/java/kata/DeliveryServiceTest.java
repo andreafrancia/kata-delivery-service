@@ -27,4 +27,13 @@ public class DeliveryServiceTest {
 
         assertEquals(List.of("unes"), result);
     }
+
+    @Test
+    public void lockerTooSmall() {
+        service.addLocker("unes", 1);
+
+        List<String> result = service.collectionPointsForPackageOfSize(10);
+
+        assertEquals(emptyList(), result);
+    }
 }
