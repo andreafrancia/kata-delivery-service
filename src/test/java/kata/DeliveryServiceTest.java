@@ -18,4 +18,13 @@ public class DeliveryServiceTest {
 
         assertEquals(emptyList(), result);
     }
+
+    @Test
+    public void oneLocker() {
+        service.addLocker("unes", 10);
+
+        List<String> result = service.collectionPointsForPackageOfSize(10);
+
+        assertEquals(List.of("unes"), result);
+    }
 }
