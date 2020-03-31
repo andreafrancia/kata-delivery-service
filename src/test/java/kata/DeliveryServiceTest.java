@@ -36,4 +36,13 @@ public class DeliveryServiceTest {
 
         assertEquals(emptyList(), result);
     }
+
+//    @Test
+//    public void lockerWithTwoBoxes() {
+//        service.addLocker("unes", 1, 10);
+//
+//        List<String> result = service.collectionPointsForPackageOfSize(10);
+//
+//        assertEquals(emptyList(), result);
+//    }
 }
