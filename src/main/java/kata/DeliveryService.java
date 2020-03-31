@@ -6,8 +6,8 @@ import java.util.List;
 public class DeliveryService {
     private List<Locker> lockers = new ArrayList<>();
 
-    public void addLocker(String name, int box) {
-        lockers.add(new Locker(name, box));
+    public void addLocker(String name, int... boxes) {
+        lockers.add(new Locker(name, boxes));
     }
 
     public List<String> collectionPointsForPackageOfSize(int packageSize) {

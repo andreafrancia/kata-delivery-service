@@ -3,14 +3,14 @@ package kata;
 class Locker
 {
     final String name;
-    private final int box;
+    private final int[] boxes;
 
-    public Locker(String name, int box) {
+    public Locker(String name, int[] boxes) {
         this.name = name;
-        this.box = box;
+        this.boxes = boxes;
     }
 
     boolean canAcceptPackageOfSize(int packageSize) {
-        return box >= packageSize;
+        return boxes[0] >= packageSize;
     }
 }

@@ -46,4 +46,13 @@ public class DeliveryServiceTest {
 
         assertEquals(List.of("big-enough"), result);
     }
+
+//    @Test
+//    public void multipleBoxes() {
+//        service.addLocker("small", 1, 10);
+//
+//        List<String> result = service.collectionPointsForPackageOfSize(10);
+//
+//        assertEquals(List.of("big-enough"), result);
+//    }
 }
