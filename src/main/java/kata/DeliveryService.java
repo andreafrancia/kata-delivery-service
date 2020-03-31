@@ -14,18 +14,16 @@ class Locker
     }
 }
 public class DeliveryService {
-    private List<Locker> lockers2 = new ArrayList<>();
-    private int box;
+    private List<Locker> lockers = new ArrayList<>();
 
     public void addLocker(String name, int box) {
-        this.box = box;
-        lockers2.add(new Locker(name, box));
+        lockers.add(new Locker(name, box));
     }
 
     public List<String> collectionPointsForPackageOfSize(int packageSize) {
         var result = new ArrayList<String>();
-        for(Locker locker: lockers2) {
-            if (box >= packageSize)
+        for(Locker locker: lockers) {
+            if (locker.box >= packageSize)
                 result.add(locker.name);
         }
         return result;
